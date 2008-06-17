@@ -18,14 +18,14 @@
 	* @author	Rein Velt
 	* @copyright	Copyright (c) 2008 Rein Velt (http://velt.org)
 	* @version 	Release: @package_version@
-	* @link		http://velt.org/phpwsrp
+	* @link		http://velt.org/research/phpwsrp
 	**/
 
 
 
 	// @TODO: fix bug: the portles looses its porletHandle after it is cloned and a form is submitted.
 	// it will cause an crash when submitting the cloned form the second time.
-	// question: how many time can a portlet be cloned from a clone? Can we only clone from the originals?
+	// how many time can a portlet be cloned from a clone? Can we only clone from the originals?
 
 	//define("DEBUG",1);
 
