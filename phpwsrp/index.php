@@ -6,7 +6,10 @@
 </style>
 </head>
 <body>
+
+
 <?php
+	
 	require_once('wsrpcustomer.class.php');
 
 	$myconsumer=new wsrpconsumer('http://wsrp.netunitysoftware.com/WSRPTestService/WSRPTestService.asmx?Operation=WSDL','wsrpproxy.php');

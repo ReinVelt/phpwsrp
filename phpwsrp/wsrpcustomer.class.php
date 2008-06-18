@@ -76,7 +76,6 @@
 			$request=$this->request;
 			$response=$this->wsdl->register($request);
 			$this->request["registrationHandle"]=$response->registrationHandle;
-			//print_r($response);
 			return $response;
 		}
 
@@ -278,9 +277,9 @@
 				$newmode="wsrp:view";
 			}
 			$encodedRequest=$this->encodeRequest($this->request);
-			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=view&request='.$encodedRequest.'" title="click to view">view</a></li>';
-			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=edit&request='.$encodedRequest.'" title="click to edit">edit</a></li>';
-			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=help&request='.$encodedRequest.'" title="click to help">help</a></li>';
+			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=view&request='.$encodedRequest.'" title="click to view">&#9996;</a></li>';
+			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=edit&request='.$encodedRequest.'" title="click to edit">&#9997;</a></li>';
+			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=help&request='.$encodedRequest.'" title="click to help">&#9774;</a></li>';
 			//$htmlFragment.='<li><a href="'.$this->proxyUrl.'?request='.$encodedRequest.'" title="windowState">'.$windowState.'</a></li>';
 			//$htmlFragment.='<li><a href="'.$this->proxyUrl.'?unregister=1&request='.$encodedRequest.'" title="unregister">X</a></li>';
 			$htmlFragment.='</ul>';
