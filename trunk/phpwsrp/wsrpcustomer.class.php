@@ -240,7 +240,7 @@
 			{
 				//put the portlet in a div-tag
 				$htmlFragment='<div id="portlet'.$portletHandle.'" class="portlet" title="'.$response->markupContext->preferredTitle.'">';
-				$htmlFragment.=$this->renderControls($mode,$windowState);
+				$htmlFragment.=$this->renderControls($response->markupContext->preferredTitle,$mode,$windowState);
 				$htmlFragment.='<div class="portletMarkup">';
 				$htmlFragment.=$htmlFragmentBody;
 				$htmlFragment.='</div>';
@@ -265,9 +265,10 @@
 		*  @param	string	current windowState
 		*  @return	string	xhtml fragment containing markup for indicators
 		**/
-		private function renderControls($mode,$windowState)
+		private function renderControls($title,$mode,$windowState)
 		{
 			$htmlFragment='<ul class="portletControls" title="portlet controls">';
+			$htmlFrament.=$title;
 			if ($mode=="wsrp:view" || $mode=="view" )
 			{
 				$newmode="wsrp:edit";
