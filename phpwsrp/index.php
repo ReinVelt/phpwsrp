@@ -1,12 +1,12 @@
 <html>
 <head>
 <style>
-	body {font-family:verdana, arial;}
-	.portlet { margin:10px; border:solid 1px; width:500px; height:300px; font-size:8px; float:left;}
+	body {margin:2em; font-family:verdana, arial;}
+	.portlet { margin:10px; border:solid 1px; width:500px; height:350px; font-size:8px; float:left;}
 </style>
 </head>
 <body>
-
+<h1>WSRP Customer example</h1>
 
 <?php
 	
@@ -17,20 +17,12 @@
 	$registrationHandle=$myconsumer->getRegistrationHandle();
 
 	//RSS FEED
-	$portletHandle="22DCEB09-25E0-4d24-9BC9-8ACAF3108567";
-	$htmlfragment=$myconsumer->render($portletHandle,'view','object');
-	print $htmlfragment;
-
-	//STOCK QUOTE
-	$portletHandle="22DCEB09-25E0-4d24-9BC9-8ACAF3108567";
-	$htmlfragment=$myconsumer->render($portletHandle,'edit','object');
-	print $htmlfragment;
-
+	print $myconsumer->render("22DCEB09-25E0-4d24-9BC9-8ACAF3108567",'view','object');
 	
-
-	//print '<pre>'; 
-	//print_r( $myconsumer->getAvailableServices());	
-	//print '</pre>';
+	
+	//STOCK QUOTE
+	print $myconsumer->render("22DCEB09-25E0-4d24-9BC9-8ACAF3108567",'edit','object');
+	
 
 	
 
