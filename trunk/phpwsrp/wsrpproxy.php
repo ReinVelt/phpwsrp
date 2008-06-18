@@ -48,10 +48,12 @@
 <head>
 	<style>
 		body { font-family:arial, helvetica; margin:0; padding:0; }
-		.portletControls {background-color:blue; color: white; list-style:none; height:20px; width:100%; margin:0; margin-right:20px;}
-		.portletControls li {background-color:silver; border:solid 1px; width:50px; display:inline; }
-		.portletMarkup  {margin:4px;}
-		.portletMarkup:hover {border:solid 1px;}
+		.portlet		{}
+		.portlet h1		{font-size:100%; margin:0; padding:0; width:80%; margin-right:100px; overflow:hidden; float:left;}
+		.portletControls {position:absolute; top:2px; right:2px;  text-align:right; list-style:none; width:150px; margin:0; }
+		.portletControls li { display:inline; font-size:90%;}
+		.portletControls .title {font-weight:bold; float:left; width:70%; }
+		.portletMarkup  {padding:4px; clear:both; }
 	</style>
 </head>
 <body>

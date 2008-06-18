@@ -231,9 +231,11 @@
 		**/
 		public function render($portletHandle,$mode,$containerType='div')
 		{
+			$mode=$this->validateMode($mode);
 			$response=$this->getMarkup($portletHandle,$mode);
 			$markup=$response->markupContext->markupString;
 			$windowState=$this->request["markupParams"]["windowState"];
+			$this->request["markupParams"]["mode"]=$mode;;
 			$this->request["portletContext"]["portletHandle"]=$portletHandle;
 			$htmlFragmentBody=$this->urlRewrite($markup);	
 			if ($containerType=='div')
@@ -250,8 +252,8 @@
 			{
 				//put the portlet in an object tag and run it via the wsrp customer proxy
 				$contentType=$response->markupContext->mimeType;
-				$htmlFragment='<object id="portlet'.$portletHandle.'" class="portlet" title="'.$response->markupContext->preferredTitle.'"';
-				$htmlFragment.=' data="'.$this->proxyUrl.'?portletHandle='.$portletHandle.'&request='.$this->encodeRequest($this->request).'" type="'.$contentType.'">';
+				$htmlFragment='<object id="portlet'.$portletHandle.'" class="portlet portletMarkup" title="'.$response->markupContext->preferredTitle.'"';
+				$htmlFragment.=' data="'.$this->proxyUrl.'?mode='.$mode.'&portletHandle='.$portletHandle.'&request='.$this->encodeRequest($this->request).'" type="'.$contentType.'">';
 				$htmlFragment.=$htmlFragmentBody; //insert markup for disabled webbrowsers
 				$htmlFragment.='</object>';
 			}			
@@ -267,8 +269,9 @@
 		**/
 		private function renderControls($title,$mode,$windowState)
 		{
-			$htmlFragment='<ul class="portletControls" title="portlet controls">';
-			$htmlFrament.=$title;
+			$htmlFragment='<div class="portlet">';
+			$htmlFragment.='<h1 class="title">'.$title.'</h1>';
+			$htmlFragment.='<ul class="portletControls" title="portlet controls">';
 			if ($mode=="wsrp:view" || $mode=="view" )
 			{
 				$newmode="wsrp:edit";
@@ -278,12 +281,13 @@
 				$newmode="wsrp:view";
 			}
 			$encodedRequest=$this->encodeRequest($this->request);
-			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=view&request='.$encodedRequest.'" title="click to view">&#9996;</a></li>';
-			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=edit&request='.$encodedRequest.'" title="click to edit">&#9997;</a></li>';
-			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=help&request='.$encodedRequest.'" title="click to help">&#9774;</a></li>';
+			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=view&request='.$encodedRequest.'" title="click to view">[view]</a></li>';
+			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=edit&request='.$encodedRequest.'" title="click to edit">[edit]</a></li>';
+			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=help&request='.$encodedRequest.'" title="click to help">[help]</a></li>';
 			//$htmlFragment.='<li><a href="'.$this->proxyUrl.'?request='.$encodedRequest.'" title="windowState">'.$windowState.'</a></li>';
 			//$htmlFragment.='<li><a href="'.$this->proxyUrl.'?unregister=1&request='.$encodedRequest.'" title="unregister">X</a></li>';
 			$htmlFragment.='</ul>';
+			$htmlFragment.='</div>';
 			return $htmlFragment;		
 		}
 
