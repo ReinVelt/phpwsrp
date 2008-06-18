@@ -24,10 +24,10 @@
 
 
 	// @TODO: fix bug: the portles looses its porletHandle after it is cloned and a form is submitted.
-	// it will cause an crash when submitting the cloned form the second time.
-	// how many time can a portlet be cloned from a clone? Can we only clone from the originals?
-
-	//define("DEBUG",1);
+	// it will cause an crash when submitting the cloned form the second time. This is fixed by 
+	// preventing the ported to be submitted for the second time.
+	
+	
 
 	class wsrpconsumer
 	{
