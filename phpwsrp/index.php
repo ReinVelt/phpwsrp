@@ -14,7 +14,7 @@
 
 	$myconsumer=new wsrpconsumer('http://wsrp.netunitysoftware.com/WSRPTestService/WSRPTestService.asmx?Operation=WSDL','wsrpproxy.php');
 	$registration=$myconsumer->register();
-	$registrationHandle=$myconsumer->getRegistrationHandle();
+	
 
 	//RSS FEED
 	print $myconsumer->render("22DCEB09-25E0-4d24-9BC9-8ACAF3108567",'view','object');
