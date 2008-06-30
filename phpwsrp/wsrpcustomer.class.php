@@ -14,11 +14,11 @@
 	* To understand this class please read the the wsrp portlet primer from oasis-open.org
 	* http://www.oasis-open.org/committees/download.php/10539/wsrp-primer-1.0.html#scen_discover_portlets
 	*
-	* @package	PHP_Portlet_Consumer
-	* @author	Rein Velt
+	* @package		PHP_Portlet_Consumer
+	* @author		Rein Velt
 	* @copyright	Copyright (c) 2008 Rein Velt (http://velt.org)
-	* @version 	Release: @package_version@
-	* @link		http://velt.org/research/phpwsrp
+	* @version 		Release: @package_version@
+	* @link			http://velt.org/research/phpwsrp
 	**/
 
 
