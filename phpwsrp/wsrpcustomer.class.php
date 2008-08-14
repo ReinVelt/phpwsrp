@@ -143,12 +143,12 @@
 			switch ($mode)
 			{
 				case "wsrp:edit":
-				case "edit":		$mode="wsrp:edit"; break;
+				case "edit":      $mode="wsrp:edit"; break;
 				case "wsrp:view":
-				case "view":		$mode="wsrp:view"; break;
+				case "view":      $mode="wsrp:view"; break;
 				case "wsrp:help":
-				case "help":		$mode="wsrp:help"; break;
-				default:			$mode="wsrp:view"; break;
+				case "help":      $mode="wsrp:help"; break;
+				default:          $mode="wsrp:view"; break;
 			}
 			return $mode;
 		}
