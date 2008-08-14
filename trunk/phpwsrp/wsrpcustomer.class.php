@@ -261,6 +261,7 @@
 		}
 
 
+		
 		/**
 		*  renderControls - create xhtml markup for the edit/view/minimize/maximize/help/close indicators
 		*  @param	string	current mode
@@ -272,13 +273,15 @@
 			$htmlFragment='<div class="portlet">';
 			$htmlFragment.='<h1 class="title">'.$title.'</h1>';
 			$htmlFragment.='<ul class="portletControls" title="portlet controls">';
-			if ($mode=="wsrp:view" || $mode=="view" )
+			switch($mode)
 			{
-				$newmode="wsrp:edit";
-			}
-			else
-			{
-				$newmode="wsrp:view";
+				case "wsrp:view":
+				case "view"		: $newmode="wsrp:edit"; break
+				case "wsrp:edit":
+				case "edit"		: $newmode="wsrp:view"; break;
+				case "wsrp:help":
+				case "help"		: $newmode="wsrp:help"; break;
+				default			: break;
 			}
 			$encodedRequest=$this->encodeRequest($this->request);
 			$htmlFragment.='<li><a href="'.$this->proxyUrl.'?mode=view&request='.$encodedRequest.'" title="click to view">[view]</a></li>';
@@ -291,6 +294,7 @@
 			return $htmlFragment;		
 		}
 
+		
 
 		/**
 		*  encodeRequest - encode request object to use with a link
@@ -302,6 +306,7 @@
 			return base64_encode(serialize($request));
 		}
 
+		
 
 		/**
 		*  decodeRequest - decode string and convert it to a requestobject
