@@ -2,27 +2,50 @@
 	/**
 	* WSRP Consumer for PHP - PROOF OF CONCEPT
 	*
-	* @description	This class provides all required methods to implement a wsrp porlet customer
+	* 
+	* Copyright (c) 2008, Rein Velt
+	* All rights reserved.
 	*
+	* Redistribution and use in source and binary forms, with or without
+	* modification, are permitted provided that the following conditions are met:
+	*     * Redistributions of source code must retain the above copyright
+	*       notice, this list of conditions and the following disclaimer.
+	*     * Redistributions in binary form must reproduce the above copyright
+	*       notice, this list of conditions and the following disclaimer in the
+	*       documentation and/or other materials provided with the distribution.
+	*     * Neither the name of the <organization> nor the
+	*       names of its contributors may be used to endorse or promote products
+	*       derived from this software without specific prior written permission.
+	*
+	* THIS SOFTWARE IS PROVIDED BY REIN VELT ''AS IS'' AND ANY
+	* EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+	* WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+	* DISCLAIMED. IN NO EVENT SHALL REIN VELT BE LIABLE FOR ANY
+	* DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+	* (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+	* LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+	* ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+	* (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+	* SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	* 
 	* This source file is subject to the new BSD license that is bundled
 	* with this package in the file LICENSE.txt. It is also available through
-	* the world-wide-web at this URL: http://framework.zend.com/license/new-bsd
-	* If you did not receive a copy of the license and are unable to obtain
-	* it through the world-wide-web, please send an email to rein@velt.org so
-	* we can email you a copy immediately.
-	*
-	* To understand this class please read the the wsrp portlet primer from oasis-open.org
-	* http://www.oasis-open.org/committees/download.php/10539/wsrp-primer-1.0.html#scen_discover_portlets
-	*
+	* the world-wide-web. If you did not receive a copy of the license and are unable 
+	* to obtain it through the world-wide-web, please send an email to rein@velt.org 
+	* so we can email you a copy immediately.
+	* 
+	* 
 	* @package		PHP_Portlet_Consumer
 	* @author		Rein Velt
 	* @copyright	Copyright (c) 2008 Rein Velt (http://velt.org)
 	* @version 		Release: @package_version@
 	* @link			http://velt.org/research/phpwsrp
+	* 
+	* @description	This class provides all required methods to implement a wsrp porlet customer
+	* To understand this class please read the the wsrp portlet primer from oasis-open.org
+	* http://www.oasis-open.org/committees/download.php/10539/wsrp-primer-1.0.html#scen_discover_portlets
 	**/
-
-
-
+	
 	// @TODO: fix bug: the portles looses its porletHandle after it is cloned and a form is submitted.
 	// it will cause an crash when submitting the cloned form the second time. This is fixed by 
 	// preventing the ported to be submitted for the second time.
