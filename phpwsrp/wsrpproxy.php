@@ -5,11 +5,12 @@
 	$myconsumer->request=$myconsumer->decodeRequest($_GET["request"]);
 	if (isset($_GET["portletHandle"]))
 	{
+		//use a new portletHandle
 		$portletHandle=$_GET["portletHandle"];
-
 	}
 	else
 	{
+		//use the already defined portlethandle
 		$portletHandle=$myconsumer->request["portletContext"]["portletHandle"];
 	}
 	
