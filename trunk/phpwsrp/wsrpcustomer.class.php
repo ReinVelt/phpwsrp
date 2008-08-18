@@ -268,7 +268,7 @@
 			switch($mode)
 			{
 				case "wsrp:view":
-				case "view"		: $newmode="wsrp:edit"; break
+				case "view"		: $newmode="wsrp:edit"; break;
 				case "wsrp:edit":
 				case "edit"		: $newmode="wsrp:view"; break;
 				case "wsrp:help":
