@@ -116,7 +116,7 @@
 			}
 			else
 			{
-				result=NULL;
+				$result=NULL;
 			}
 			return $result
 		}
