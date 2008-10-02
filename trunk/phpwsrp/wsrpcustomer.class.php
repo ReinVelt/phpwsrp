@@ -147,7 +147,7 @@
 			$request["markupParams"]=array();
 			$request["markupParams"]["secureClientCommunication"]=false;
 			$request["markupParams"]["locales"]=array(0 => "en-US");
-			$request["markupParams"]["mimeTypes"]=array(0 => "text/HTML");
+			$request["markupParams"]["mimeTypes"]=array(0 => "text/html");
 			$request["markupParams"]["mode"]=$this->validateMode($mode);
 			$request["markupParams"]["windowState"]="wsrp:normal";
 			$response=$this->wsdl->getMarkup($request);
@@ -193,7 +193,7 @@
 			$request["markupParams"]=array();
 			$request["markupParams"]["secureClientCommunication"]=false;
 			$request["markupParams"]["locales"]=array(0 => "en-US");
-			$request["markupParams"]["mimeTypes"]=array(0 => "text/HTML");
+			$request["markupParams"]["mimeTypes"]=array(0 => "text/html");
 			$request["markupParams"]["mode"]=$this->validateMode($mode);
 			$request["markupParams"]["windowState"]="wsrp:normal";
 			$request["interactionParams"]=array();
