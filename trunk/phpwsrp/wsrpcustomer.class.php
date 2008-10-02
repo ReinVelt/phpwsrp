@@ -110,7 +110,15 @@
 		**/	
 		public function getRegistrationHandle()
 		{
-			return $this->request["registrationHandle"];
+			if (isset($this->request["registrationHandle"]))
+			{
+				$result=$this->request["registrationHandle"]
+			}
+			else
+			{
+				result=NULL;
+			}
+			return $result
 		}
 
 
