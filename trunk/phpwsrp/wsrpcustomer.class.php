@@ -112,7 +112,7 @@
 		{
 			if (isset($this->request["registrationHandle"]))
 			{
-				$result=$this->request["registrationHandle"]
+				$result=$this->request["registrationHandle"];
 			}
 			else
 			{
