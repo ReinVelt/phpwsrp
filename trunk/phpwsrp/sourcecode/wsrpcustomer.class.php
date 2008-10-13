@@ -44,6 +44,7 @@
 	* @description	This class provides all required methods to implement a wsrp porlet customer
 	* To understand this class please read the the wsrp portlet primer from oasis-open.org
 	* http://www.oasis-open.org/committees/download.php/10539/wsrp-primer-1.0.html#scen_discover_portlets
+	* Bugs and Change request can be reported at http://code.google.com/p/phpwsrp/
 	**/
 	
 	// @TODO: fix bug: the portles looses its porletHandle after it is cloned and a form is submitted.
