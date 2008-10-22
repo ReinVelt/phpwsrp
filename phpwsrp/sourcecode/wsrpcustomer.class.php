@@ -47,9 +47,14 @@
 	* Bugs and Change request can be reported at http://code.google.com/p/phpwsrp/
 	**/
 	
+	// KNOWN ISSUES:
 	// @TODO: fix bug: the portles looses its porletHandle after it is cloned and a form is submitted.
 	// it will cause an crash when submitting the cloned form the second time. This is fixed by 
 	// preventing the portlet to be submitted for the second time.
+	
+	// @TODO: fix bug: the class complains when using a portlet without authorization. This is
+	// because the registration is undefined when not using it. This should be fixed soon.
+	// workaround: switch off E_NOTICE messages
 	
 	
 
