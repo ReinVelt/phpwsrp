@@ -208,7 +208,7 @@
 			$request["interactionParams"]=array();
 			if ($this->request["interactionParams"]["portletStateChange"]=="cloneBeforeWrite")
 			{
-				//an already cloned portlet is writabled and cannot be cloned again
+				//an already cloned portlet is writable and cannot be cloned again
 				$request["interactionParams"]["portletStateChange"]="readWrite";
 			}	
 			else
