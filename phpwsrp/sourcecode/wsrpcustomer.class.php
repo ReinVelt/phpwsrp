@@ -124,7 +124,7 @@
 			{
 				$result=NULL;
 			}
-			return $result
+			return $result;
 		}
 
 
